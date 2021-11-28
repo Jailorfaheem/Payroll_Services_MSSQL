@@ -24,7 +24,18 @@ select * from employee_payroll where startDate between cast('2020-11-11' as date
 select * from employee_payroll;
 ALTER TABLE employee_payroll ADD Gender char(1);
 update employee_payroll set Gender='M';
-INSERT INTO employee_payroll VALUES ('AASHIMA',44444.44,'2025-10-10','F'),('AISHWARIYA',666666.6666,'2028-10-10','F');
+INSERT INTO employee_payroll VALUES ('AASHIMA',44444.44,'2025-10-10','F'),('SHRADHA',666666.6666,'2028-10-10'','F');
 update employee_payroll set startDate='2025-10-10' where id=4;
 update employee_payroll set startDate='2028-10-10' where id=1 and name='PWD';
+
+---UC7 : Ability to find sum,average,max, min and number of male and female employees
+select * from employee_payroll;
+select sum(salary) as TotalSalary from employee_payroll;
+select max(salary) as Maximum from employee_payroll;
+select min(salary) as Minimum from employee_payroll;
+select avg(salary) as AverageSalary from employee_payroll;
+select count(salary) as NumOfEmployees from employee_payroll;
+select count(salary) as NumberOfEmployee,Gender from employee_payroll group by Gender;
+
+
 
