@@ -12,3 +12,6 @@ CREATE TABLE employee_payroll (
 
 ---UC3 : Ability to create employee payroll data service database
 INSERT INTO employee_payroll (name,salary,startDate) VALUES ('PWD',8888888.88,'2015-11-11'),('FAHEEM',1414141.141,'2021-12-12');
+
+--UC4 : Ability to retrieve all the employee payroll data 
+select * from employee_payroll;
